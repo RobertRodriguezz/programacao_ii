@@ -172,7 +172,7 @@ public class checklist extends javax.swing.JFrame {
     if( s == "" ){
         JOptionPane.showMessageDialog(rootPane, s);
         System.out.println(s);
-    }else if(s != ""){
+    }else{
         DefaultTableModel model = (DefaultTableModel) table.getModel();
         model.addRow(new Object[]{false, s});    
     }
