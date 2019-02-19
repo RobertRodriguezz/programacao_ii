@@ -45,7 +45,7 @@ public class checklist extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        txtInput.setText(" ");
+        txtInput.setText("...");
         txtInput.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtInputActionPerformed(evt);
@@ -169,13 +169,12 @@ public class checklist extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
     private void btnInsertActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInsertActionPerformed
     String s = txtInput.getText();
-    if( s == ""){
+    if( s == "" ){
         JOptionPane.showMessageDialog(rootPane, s);
         System.out.println(s);
-    }else{
+    }else if(s != ""){
         DefaultTableModel model = (DefaultTableModel) table.getModel();
         model.addRow(new Object[]{false, s});    
-        System.out.println(s);
     }
     }//GEN-LAST:event_btnInsertActionPerformed
 
